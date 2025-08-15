@@ -184,7 +184,6 @@ These are the certificates required by the OpenUEM agent:
 - agent.key, this is the private key that allows the agent to connect with the NATS server. You should find the file in the folder where the OpenUEM Server/Docker was installed under `/etc/openuem-agent/certificates/agent.key`
 
 ```(bash)
-sudo mkdir /etc/openuem-agent/certificates
 sudo chown openuem-agent:openuem-agent /etc/openuem-agent/certificates
 ```
 

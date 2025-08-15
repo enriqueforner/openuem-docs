@@ -20,7 +20,7 @@ keywords:
 
 OpenUEM profiles allows you to group several configuration tasks that will be applied to your endoints by defining a desired state.
 
-Right now, you can install or uninstall packages with WinGet/Flatpak/Brew, manage registry keys, local users and local groups.
+Right now, you can install or uninstall packages with WinGet/Flatpak/Brew, manage registry keys, local users and local groups. Also you can run basic PowerShell scripts in Windows endpoints and basic shell scripts in Linux and MacOS endpoints.
 
 :::tip
 To reach the desired state [WinGet](https://github.com/microsoft/winget-dsc) is used for Windows endpoints and [Ansible](https://docs.ansible.com/) is used for Linux and MacOS endpoints
@@ -66,7 +66,7 @@ Add another task. This time we are installing Adobe Acrobat from WinGet’s repo
 
 ## Applying the profile
 
-Once your profile is ready, **OpenUEM agents will check, every 30 minutes, if new profiles are available to apply**. If new profiles are ready the agent will apply them using [WinGet’s configuration option.](https://learn.microsoft.com/en-us/windows/package-manager/configuration/)
+Once your profile is ready, **OpenUEM agents will check, every 30 minutes, if new profiles are available to apply**. If new profiles are ready the agent will apply them using [WinGet’s configuration option.](https://learn.microsoft.com/en-us/windows/package-manager/configuration/) or [Ansible](https://docs.ansible.com/) for Linux and MacOS agents.
 
 You can increase the frequency that agents check for profiles in [Admin -> General Settings](/docs/05-Administration/06-general-settings.md).
 
@@ -87,8 +87,9 @@ If you click on that warning sign, you’ll open a new table showing the endpoin
 ### 1. Install/Uninstall MSI packages
 
 If you want to install or uninstall an MSI file using WinGet, you’ll need at least two things:
-1)	The path to the MSI. Specify the path to the MSI package as a string. This can be the path to an MSI file on the local machine, the path to an MSI package on a UNC drive, or a web URI where the MSI package can be downloaded from. If this property's value isn't a web URI, it must end with .msi
-2)	The product ID that is associated with the MSI. This value is a GUID and is the identifying number used to find the package. Usually, you install the package first and then you can look for the product ID in the registry, but the following Powershell command will provide you with the GUID (BinaryName) column:
+
+1. The path to the MSI. Specify the path to the MSI package as a string. This can be the path to an MSI file on the local machine, the path to an MSI package on a UNC drive, or a web URI where the MSI package can be downloaded from. If this property's value isn't a web URI, it must end with .msi
+2. The product ID that is associated with the MSI. This value is a GUID and is the identifying number used to find the package. Usually, you install the package first and then you can look for the product ID in the registry, but the following Powershell command will provide you with the GUID (BinaryName) column:
 
 ```
 PS C:\Users\ouem> Get-AppLockerFileInformation .\Downloads\AutoFirma_64_v1_8_3_installer.msi | select -ExpandProperty Publisher | select ProductName,BinaryVersion,BinaryName

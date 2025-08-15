@@ -16,6 +16,31 @@ keywords:
 
 # Agents
 
+## 0.8.0
+
+Released: 16/07/2025
+
+Linux and MacOS agents can now use Ansible to manage users, groups, flatpak packages and execute bash scripts
+Windows agents can now execute PowerShell scripts and manage MSI packages.
+
+:::warning
+OpenUEM Agent for Windows has new permissions as suggested by cr1sti. Folders under (with some exceptions assets, badgerdb...) C:\Program Files\OpenUEM Agent requires administrator privileges to get access.
+:::
+
+- fix: memory slot info for Apple Silicon
+- feat: execute powershell scripts and update go packages
+- feat: execute powershell scripts only once on demand
+- feat: apply ansible playbooks for Linux endpoints
+- feat: install ansible community.general collection
+- feat: macos groups, brew and scripts
+- feat: add debug for ansible tasks
+- fix: initial report task time must use tenant settings
+- fix: agent stream context is now 5 minutes an its management is in a go routine
+- fix: use grep update for dnf history list
+- fix: add workaround for different output for dnf history list
+- feat: create a copy of the log before watchdog starts a non-running agent
+- feat: agent stream consumer to go routine and decrease timeout
+
 ## 0.7.0
 
 Released: 18/06/2025

@@ -16,22 +16,9 @@ keywords:
 
 # 🐘 Setting the Postgres database
 
-## 1. Install the Postgres database server
+## 1. Ubuntu/Debian
 
-To install the Postgres database server on a Windows or Linux machine please use the following references:
-
-- [Debian](https://www.postgresql.org/download/linux/debian/)
-- [Ubuntu](https://www.postgresql.org/download/linux/ubuntu/)
-- [Fedora](https://www.postgresql.org/download/linux/redhat/)
-- [Alma Linux](https://www.postgresql.org/download/linux/redhat/)
-- [Rocky Linux](https://www.postgresql.org/download/linux/redhat/)
-- [Windows](https://www.postgresql.org/download/windows/)
-
-## 2. Create the database
-
-### 2.1 Ubuntu/Debian
-
-First, install the database, start the Postgres database server and enable the service to start at boot:
+First, install the database server, start the Postgres database server and enable the service to start at boot:
 
 ```(bash)
 sudo apt install -y postgresql
@@ -75,7 +62,11 @@ The OpenUEM database and the associated user should be ready.
 When you install OpenUEM (server components or agent) you'll have to specify the database url. Following the previous example the database url should be `postgres://test:test@localhost:5432/openuem`
 :::
 
-### 2.2 Windows
+## 2. Windows
+
+First, install the Postgres database server using the following reference:
+
+- [Windows](https://www.postgresql.org/download/windows/)
 
 Once you’ve installed Postgres on Windows using the default installation you must create a database for OpenUEM and add a user with privileges on that database.
 
@@ -113,26 +104,31 @@ Click on the **Security** tab and set all privileges to the account.
 
 Finally, click on **Save** to create the database.
 
-### 2.3 RedHat/AlmaLinux/Fedora/Rocky Linux
+## 3. RedHat/AlmaLinux/Fedora/Rocky Linux
 
-First, initialize the database, start the Postgres database server and enable the service to start at boot:
+First, install the Postgres database server using the following references:
+
+- [Fedora](https://www.postgresql.org/download/linux/redhat/)
+- [Alma Linux](https://www.postgresql.org/download/linux/redhat/)
+- [Rocky Linux](https://www.postgresql.org/download/linux/redhat/)
+
+Now, initialize the database, start the Postgres database server and enable the service to start at boot:
 
 ```(bash)
-sudo postgresql-setup --initdb
-sudo systemctl start postgresql
-sudo systemctl enable postgresql
+sudo postgresql-17-setup --initdb
+sudo systemctl start postgresql-17
+sudo systemctl enable postgresql-17
 ```
 
 Then check that the server is running:
 
 ```(bash)
-● postgresql.service - PostgreSQL database server
-     Loaded: loaded (/usr/lib/systemd/system/postgresql.service; enabled; preset: disabled)
-    Drop-In: /usr/lib/systemd/system/service.d
-             └─10-timeout-abort.conf
-     Active: active (running) since Mon 2025-06-16 15:57:44 CEST; 3min 19s ago
- Invocation: dcd3ad6f23564b9f93e403eeebfd258c
-   Main PID: 44987 (postgres)
+sudo systemctl status postgresql-17
+● postgresql-17.service - PostgreSQL 17 database server
+     Loaded: loaded (/usr/lib/systemd/system/postgresql-17.service; enabled; preset: disabled)
+     Active: active (running) since Tue 2025-07-15 13:33:00 CEST; 2min 52s ago
+       Docs: https://www.postgresql.org/docs/17/static/
+
 ```
 
 Now, install the postgresql client:
@@ -157,8 +153,9 @@ ALTER DATABASE openuem OWNER TO test;
 \q
 ```
 
-Now according to [Fedora docs](https://docs.fedoraproject.org/en-US/quick-docs/postgresql/) we must edit the `/var/lib/pgsql/data/pg_hba.conf` and
-replace `host all all 127.0.0.1/32 ident` with `host all all 127.0.0.1/32 md5` and restart the service `sudo systemctl restart postgresql`
+:::danger
+For Fedora servers, according to [Fedora docs](https://docs.fedoraproject.org/en-US/quick-docs/postgresql/) we must edit the `/var/lib/pgsql/data/pg_hba.conf` and replace `host all all 127.0.0.1/32 ident` with `host all all 127.0.0.1/32 md5` and restart the service `sudo systemctl restart postgresql`
+:::
 
 :::warning
 The password cannot contain the # symbol
@@ -170,7 +167,7 @@ The OpenUEM database and the associated user should be ready.
 When you install OpenUEM (server components or agent) you'll have to specify the database url. Following the previous example the database url should be `postgres://test:test@localhost:5432/openuem`
 :::
 
-## 3. Remove the database tables
+## How to remove the database tables
 
 If you need to perform a clean installation, you should remove the database tables. First you must open a psql session:
 

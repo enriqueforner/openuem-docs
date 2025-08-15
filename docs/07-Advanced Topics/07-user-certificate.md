@@ -20,7 +20,21 @@ keywords:
 You must import two certificates to your favorite browser’s certificate store if you want to log in to the console and avoid the security warnings when you visit it.
 
 :::tip
-The Windows and Debian installers should add these certificates for you but if you need to import them, here's how you can do it.
+The Windows installer should add these certificates for you but if you need to import them, here's how you can do it.
+:::
+
+:::warning
+The folder where the certificates are located **require administrator privileges to get access to them**.
+
+In Linux machines you can use this commands to create a copy of the required certificates to the /tmp folder that you can use to import the certificates
+
+```
+sudo cp /etc/openuem-server/certificates/ca/ca.cer /tmp
+sudo cp /etc/openuem-server/certificates/users/admin.pfx /tmp
+sudo chmod 666 /tmp/ca.cer
+sudo chmod 666 /tmp/admin.pfx
+```
+
 :::
 
 ## 1. The Certificate Authority (ca.cer):
@@ -32,10 +46,6 @@ The Certificate Authority (CA) certificate file should be in the following locat
 - Windows: `C:\Program Files\OpenUEM Server\certificates\ca\ca.cer`
 
 You must import the certificate according to your browser’s settings
-
-:::warning
-If you're using a Linux machine you must create a copy of the certificate to a folder where you have permissions to read it as the certificates folder is owned by root
-:::
 
 ### 1.1 Chrome/Chromium/Brave
 
@@ -72,10 +82,6 @@ The certificate is protected with the password **changeit** by default unless yo
 :::
 
 You must import the certificate according to your browser’s settings
-
-:::warning
-If you're using a Linux machine you must create a copy of the certificate to a folder where you have permissions to read it as the certificates folder is owned by root
-:::
 
 ### 2.1 Chrome/Chromium/Brave
 

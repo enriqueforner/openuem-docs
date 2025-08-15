@@ -29,11 +29,11 @@ Visit the [Downloads section](/docs/06-Downloads/01-windows.md) and choose the d
 Download your preferred version and note that you can check if the checksum matches using Powershell's Get-FileHash:
 
 ```(powershell)
-Get-FileHash openuem-server-setup-0.8.0.exe
+Get-FileHash openuem-server-setup-0.9.0.exe
 
 Algorithm       Hash                                                                   Path
 ---------       ----                                                                   ----
-SHA256          307BDD5411255BBE2E840E999DF3CA17DBA4D2EEF041335EDEFECA59F64E1B72       C:\Users\doncicuto\Downloads\openuem....
+SHA256          E8366DD29EBF78A3E6B853567F527ED248D6C24346A540D03330639D0232A5B7       C:\Users\doncicuto\Downloads\openuem....
 ```
 
 ## 2. Install OpenUEM server
@@ -45,7 +45,7 @@ OpenUEM server can be installed silently.
 Here's an example to install all the components in the same server:
 
 ```(bash)
-openuem-server-setup-0.8.0.exe /console=yes /ocsp=yes /nats=yes /agent-worker=yes /notification-worker=yes /cert-manager-worker=yes /dbhost=localhost /dbport=5432 /dbuser=test /dbpassword=test /dbname=openuem /domain=local.openuem.eu /gencerts=yes /orgname=OpenUEM /orgcountry=ES /orgprovince=Valladolid /orglocality=Valladolid /natsserver=lothlorien.local.openuem.eu /natsport=4433 /natscluster=no /ocspserver=lothlorien.local.openuem.eu /ocspport=8000 /consoleserver=lothlorien.local.openuem.eu /consoleport=1323 /authport=1324 /jwtkey=alongsecretkey /VERYSILENT
+openuem-server-setup-0.9.0.exe /console=yes /ocsp=yes /nats=yes /agent-worker=yes /notification-worker=yes /cert-manager-worker=yes /dbhost=localhost /dbport=5432 /dbuser=test /dbpassword=test /dbname=openuem /domain=local.openuem.eu /gencerts=yes /orgname=OpenUEM /orgcountry=ES /orgprovince=Valladolid /orglocality=Valladolid /natsserver=lothlorien.local.openuem.eu /natsport=4433 /natscluster=no /ocspserver=lothlorien.local.openuem.eu /ocspport=8000 /consoleserver=lothlorien.local.openuem.eu /consoleport=1323 /authport=1324 /jwtkey=alongsecretkey /VERYSILENT
 ```
 
 :::note
@@ -273,4 +273,4 @@ OpenUEM logs are stored in `C:\Program Files\OpenUEM Server\logs` and you’ll f
 
 If you need to reinstall OpenUEM please proceed like this:
 
-- [Drop OpenUEM database tables](/docs/Advanced%20Topics/postgres#3-remove-the-database-tables) so the new installation can perform a clean installation of the schema. If you prefer to keep the database, at least remove the user’s table as OpenUEM creates an entry for the admin user’s certificate and that entry must be unique.
+- [Drop OpenUEM database tables](/docs/Advanced%20Topics/postgres#how-to-remove-the-database-tables) so the new installation can perform a clean installation of the schema. If you prefer to keep the database, at least remove the user’s table as OpenUEM creates an entry for the admin user’s certificate and that entry must be unique.

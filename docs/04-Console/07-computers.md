@@ -176,6 +176,10 @@ OpenUEM can deploy software to your computers automatically using Winget’s cli
 - [HomeBrew](https://brew.sh/) names itself as the missing package manager for macOS. **HomeBrew must be installed manually by the admin** if you want to deploy packages with OpenUEM
 
 :::warning
+In Linux machines, packages installed with Flatpak may not appear in Gnome's apps menu immediately, and the user may have to log out and log in again to see the app in the list
+:::
+
+:::warning
 Winget should be ready for your host if it has been used for some time, but if you have a fresh installation of Windows 10, winget.exe may not be ready to use on that endpoint although it should be installed automatically in the following days. To get the WinGet executable quicker (winget.exe), you should first update Microsoft Store after opening it and then you may have to update the app called "App Installer". Visit [this link](https://www.microsoft.com/p/app-installer/9nblggh4nns1#activetab=pivot:overviewtab) to locate that app and update it
 :::
 

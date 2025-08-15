@@ -30,5 +30,12 @@ ARM64 packages are used for Apple Silicon endpoints while AMD64 packages are use
 
 | Type  | Version | Arch  | Link                                                                                | Checksum                                                                 |
 | ----- | ------- | ----- | ----------------------------------------------------------------------------------- | ------------------------------------------------------------------------ |
+| Agent | 0.8.0   | amd64 | [Download](https://downloads.openuem.eu/agents/0.8.0/macos/amd64/openuem-agent.pkg) | SHA256: 8571F281675A4D6F07232319C6D528F4760CE90F6EEC65220050D7E46D1E879B |
+| Agent | 0.8.0   | arm64 | [Download](https://downloads.openuem.eu/agents/0.8.0/macos/arm64/openuem-agent.pkg) | SHA256: 3E06C946633F57550B165FDA477F84AD04E061E425A72EE97623F08881243A6C |
+
+## Previous versions
+
+| Type  | Version | Arch  | Link                                                                                | Checksum                                                                 |
+| ----- | ------- | ----- | ----------------------------------------------------------------------------------- | ------------------------------------------------------------------------ |
 | Agent | 0.7.0   | amd64 | [Download](https://downloads.openuem.eu/agents/0.7.0/macos/amd64/openuem-agent.pkg) | SHA256: 6D47A3CBBDEBA68916DB4C496AF9203502B1F8D8CAD31A01B06C8379A370C9A8 |
 | Agent | 0.7.0   | arm64 | [Download](https://downloads.openuem.eu/agents/0.7.0/macos/arm64/openuem-agent.pkg) | SHA256: F709592C56819350EC362B5A4D193BDF392191B7D606DEB1F4850F4093A989F7 |

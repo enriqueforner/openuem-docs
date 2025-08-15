@@ -195,6 +195,10 @@ The OpenUEM RPM repository has packages for every component and tool required to
 - openuem-server-updater
 - openuem-cert-manager
 
+:::danger
+openuem-server-updater requires a package called **crudini** that may not be available in your distribution's default repositories. If installation fails, you may have to add the [EPEL repository](https://docs.fedoraproject.org/en-US/epel/). For example, in Alma Linux, run `dnf install epel-release` so the crudini package can be found in the EPEL repository.
+:::
+
 You can install these components in different machines, if you want OpenUEM to run in a distributed mode, or install them all on the same machine.
 
 For example:
@@ -567,4 +571,4 @@ OpenUEM logs are stored in /var/log/openuem-server and you’ll find a log for e
 If you need to reinstall OpenUEM please proceed like this:
 
 - If you want Debian/Ubuntu to ask you the configuration questions again, please use `apt purge openuem-server` to uninstall and forget the answers. Otherwise, use `apt remove openuem-server`
-- [Drop OpenUEM database tables](/docs/Advanced%20Topics/postgres#3-remove-the-database-tables) so the new installation can perform a clean installation of the schema. If you prefer to keep the database, at least remove the user’s table as OpenUEM creates an entry for the admin user’s certificate and that entry must be unique.
+- [Drop OpenUEM database tables](/docs/Advanced%20Topics/postgres#how-to-remove-the-database-tables) so the new installation can perform a clean installation of the schema. If you prefer to keep the database, at least remove the user’s table as OpenUEM creates an entry for the admin user’s certificate and that entry must be unique.

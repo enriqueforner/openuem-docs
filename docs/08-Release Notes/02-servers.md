@@ -16,6 +16,47 @@ keywords:
 
 # Server
 
+## 0.9.0
+
+Released: 16/07/2025
+
+Linux and MacOS agents can now use [profiles](/docs/04-Console/13-profiles.md). New tasks have been added for Windows profiles that allows us to create basic PowerShell scripts and manage MSI packages.
+
+:::danger
+For those using OpenUEM with Docker (docker compose), please note that the `build/nats/generate-nats-conf.sh` file must be changed to include the new permissions for the ansible profiles messages.
+
+The new file can be downloaded from: [https://raw.githubusercontent.com/open-uem/openuem-docker/refs/heads/main/build/nats/generate-nats-conf.sh](https://raw.githubusercontent.com/open-uem/openuem-docker/refs/heads/main/build/nats/generate-nats-conf.sh)
+
+Once the file is replaced a new NATS container must be rebuilt using:
+
+```
+docker compose --profile openuem up --force-recreate -d --build nats-server
+```
+
+:::
+
+feat: raspberry and msi detection
+feat: manage MSI packages with winget
+feat: new powershell script task
+feat: add new select for agent's type and refactor to remove some hyperscript
+feat: add Linux tasks to add or remove local groups
+feat: add local users for linux
+feat: linux endpoints can run shell scripts
+feat: new flatpak tasks to install and uninstall for Linux
+fix: macOS is missing from case to select package source
+feat: add local gruop and script for macOS
+feat: manage brew tasks
+feat: support for macos local user
+task: don't show server stream not instantiated if doesn't apply
+task: remove message about server stream for docker
+feat: profiles ready for macos and linux
+task: improve MSI messages
+fix: agents templ navigation for agent name (logs and settings)
+fix: panic if issues without agent
+feat: add healthcheck and modernize verifyIssuer
+fix: install curl and use OCSP_PORT env for healthcheck
+fix: prevent hostname with domain to be used in consumer's name
+
 ## 0.8.0
 
 Released: 18/06/2025
