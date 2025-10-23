@@ -52,10 +52,6 @@ ALTER DATABASE openuem OWNER TO test;
 \q
 ```
 
-:::warning
-The password cannot contain the # symbol
-:::
-
 The OpenUEM database and the associated user should be ready.
 
 :::note
@@ -155,10 +151,6 @@ ALTER DATABASE openuem OWNER TO test;
 
 :::danger
 For Fedora servers, according to [Fedora docs](https://docs.fedoraproject.org/en-US/quick-docs/postgresql/) we must edit the `/var/lib/pgsql/data/pg_hba.conf` and replace `host all all 127.0.0.1/32 ident` with `host all all 127.0.0.1/32 md5` and restart the service `sudo systemctl restart postgresql`
-:::
-
-:::warning
-The password cannot contain the # symbol
 :::
 
 The OpenUEM database and the associated user should be ready.

@@ -109,7 +109,7 @@ You can install an agent in a RedHat based system.
 
 OpenUEM provides a repository for **rpm packages**. You can add the repository following the steps in the [Server section](/docs/Installation/Server/linux#21-adding-the-repository).
 
-Alternatively, you can visit the [repository](https://rpm.openuem.eu/packages/) and download the .deb package that you need.
+Alternatively, you can visit the [repository](https://rpm.openuem.eu/packages/) and download the .rpm package that you need.
 
 :::warning
 If you don’t add the OpenUEM repository to your agent, you won’t be able to update agents from the console

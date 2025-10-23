@@ -20,11 +20,13 @@ keywords:
 # 🕹️ VNC
 
 OpenUEM allows you to initiate remote assistance sessions using VNC if your endpoint has a supported VNC server.
-Right now, OpenUEM supports the following three freeware or open-source programs:
+Right now, OpenUEM supports the following three freeware or open-source programs for Windows endpoints:
 
 - [TightVNC](https://www.tightvnc.com/)
 - [UltraVNC](https://uvnc.com/)
 - [TigerVNC - winvnc](https://tigervnc.org/)
+
+In Linux the supported server is x11vnc.
 
 This page explains some of the recommendations to install these programs on your endpoints.
 

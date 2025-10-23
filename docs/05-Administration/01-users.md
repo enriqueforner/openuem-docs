@@ -36,9 +36,15 @@ Don’t forget to add [SMTP settings](/docs/05-Administration/04-smtp.md) so use
 
 ## 1. Create a new user
 
-You can create a new user directly by clicking on the **Add User** button and by filling in the form fields.
+You can create a new user directly by clicking on the **Add User** button and by filling in the form fields. 
 
-![New user form](/img/console/new_user_form.png)
+![New user form](/img/console/new_user_form_2.png)
+
+You must specify if you want the user to use certificates to log in or if OpenID connect will be used.
+
+:::note
+Please, visit the [OpenID Connect](/docs/04-Console/01-intro.md#openid-connect) section to know more about how this authenticatio works
+:::
 
 The new user will show in the Users’ table with the state **Pending email confirmation**. An email will be sent to the user, so the email address is confirmed.
 

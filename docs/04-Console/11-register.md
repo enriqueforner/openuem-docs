@@ -39,3 +39,7 @@ Here’s a sample of a message to confirm the email address.
 Once you confirm your address, you’ll see a message telling you that you’ve to wait till an administrator approves your request.
 
 ![Email address confirmed](/img/console/email_confirmed.png)
+
+🎯 Starting with version 0.10.0, you can hide the register button from the log in page. You can do it from the Authentication tab in the Global config view.
+
+![Show or hide the register button](/img/console/show_register.png)

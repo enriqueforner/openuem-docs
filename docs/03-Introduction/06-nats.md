@@ -24,10 +24,11 @@ OpenUEM uses NATS so its components can communicate using messages. For example,
 
 - Enable/disable an agent
 - Ask an agent to run a report
-- Start the VNC proxy and set the password for the session
+- Start the VNC proxy and set a password for the session
 - Deploy a package to an endpoint
 - Create a request to send an email
-- Update an agent/server with the latest OpenUEM release
+- Send configuration profiles to be applied by the agents
+- Update an agent/server with the latest OpenUEM release...
 
 OpenUEM is ready to use a NATS cluster which should contain 3 or 5 servers. When you install the OpenUEM component you'll be asked if you want to use a cluster.
 

@@ -18,7 +18,7 @@ keywords:
 
 # Version information
 
-OpenUEM shows the current console version (🎯 new feature in 0.3.0) in the header and an icon if a new release is available so you can update it when you wish.
+OpenUEM shows the current console version in the header and an icon if a new release is available so you can update it when you wish.
 
 ![New version](/img/console/new_version.png)
 

@@ -17,7 +17,7 @@ keywords:
 
 # 🏙 Multi-Tenancy
 
-From 0.7.0 version onwards, OpenUEM supports multi-tenancy. This means that you can have different organizations and sites on the same OpenUEM installation.
+OpenUEM supports multi-tenancy. This means that you can have different organizations and sites on the same OpenUEM installation.
 
 A default organization is created when OpenUEM is installed with a default site. An organization must have at least one site.
 

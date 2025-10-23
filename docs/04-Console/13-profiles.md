@@ -86,18 +86,7 @@ If you click on that warning sign, you’ll open a new table showing the endpoin
 
 ### 1. Install/Uninstall MSI packages
 
-If you want to install or uninstall an MSI file using WinGet, you’ll need at least two things:
-
-1. The path to the MSI. Specify the path to the MSI package as a string. This can be the path to an MSI file on the local machine, the path to an MSI package on a UNC drive, or a web URI where the MSI package can be downloaded from. If this property's value isn't a web URI, it must end with .msi
-2. The product ID that is associated with the MSI. This value is a GUID and is the identifying number used to find the package. Usually, you install the package first and then you can look for the product ID in the registry, but the following Powershell command will provide you with the GUID (BinaryName) column:
-
-```
-PS C:\Users\ouem> Get-AppLockerFileInformation .\Downloads\AutoFirma_64_v1_8_3_installer.msi | select -ExpandProperty Publisher | select ProductName,BinaryVersion,BinaryName
-
-ProductName BinaryVersion BinaryName
------------ ------------- ----------
-AUTOFIRMA   1.8.3.0       {B20DDDFE-4854-4D4D-9723-2F9761437532}
-```
+If you want to install or uninstall an MSI file using WinGet, you’ll need to specify the path to the MSI as a string. This can be the path to an MSI file on the local machine, the path to an MSI package on a UNC drive, or a web URI where the MSI package can be downloaded from. If this property's value isn't a web URI, it must end with .msi
 
 ### 2. Execute PowerShell scripts
 
