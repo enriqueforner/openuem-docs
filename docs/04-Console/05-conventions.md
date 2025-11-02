@@ -53,7 +53,7 @@ Some tables offer the possibility to select several items:
 
 ![Selection example](/img/console/selection_example.png)
 
-The number of selected items is updated with every selection and can be found next to the Select All and Deselect All buttons.
+The number of selected items is updated with every selection and can be found next to the **Select All** and **Deselect All** buttons.
 
 ![Items selected](/img/console/items_selected.png)
 
@@ -75,15 +75,15 @@ Some pages are refreshed automatically where you'll find the following button. Y
 
 ![Automatic refresh](/img/console/refresh.png)
 
-By default, the refresh time is set to 5 minutes. You can change that time in Admin -> General Settings
+By default, the refresh time is set to **5 minutes**. You can change that time in **Admin** -> **General Settings**
 
 ![Automatic refresh settings](/img/console/automatic_refresh_settings.png)
 
-Now, let's start with the Agents section.
+Now, let's start with the **Agents** section.
 
 ## 4. More actions
 
-If you find three dots in table’s rows, that’s a button that offers more actions to perform on the element enclosed in that row.
+If you find three dots in a table row, that’s a button that offers more actions to perform on the element enclosed in that row.
 
 ![Three dots](/img/console/three_dots.png)
 
