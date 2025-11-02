@@ -18,7 +18,7 @@ keywords:
 
 # Register
 
-Several users can get access to the console. An administrator can create new users from the Admin -> Users section or users can sign in and wait for the administrator to admit the sign in request. This page describes the latter.
+Several users can get access to the console. An administrator can create new users from the **Admin** -> **Users** section or users can sign in and wait for the administrator to admit the sign in request. This page describes the latter.
 
 In the log in page, you can find an icon to register.
 
@@ -40,6 +40,6 @@ Once you confirm your address, you’ll see a message telling you that you’ve 
 
 ![Email address confirmed](/img/console/email_confirmed.png)
 
-🎯 Starting with version 0.10.0, you can hide the register button from the log in page. You can do it from the Authentication tab in the Global config view.
+🎯 Starting with version 0.10.0, you can hide the register button from the log in page. You can do it from the **Authentication** tab in the **Global** config view.
 
 ![Show or hide the register button](/img/console/show_register.png)
