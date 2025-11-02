@@ -31,7 +31,7 @@ Right now, you can do the following with OpenUEM:
 - **Install Linux applications** using **Flatpak** and the **FlatHub** repository
 - **Install MacOS applications** using **Brew**
 - **Browse, download and upload files** contained in your endpoints logical disks using SFTP
-- Offering **remote assistance** to your users thanks to **VNC**, **RDP** (for Gnome using a Wayland display server) or **RustDesk** (🎯 Version 0.10.0)
+- Offer **remote assistance** to your users thanks to **VNC**, **RDP** (for Gnome using a Wayland display server) or **RustDesk** (🎯 Version 0.10.0)
 - **Create configuration profiles with automated tasks that can be applied to your Windows endpoints**. You can select packages to install or uninstall using WinGet and manage registry keys, local users and local groups. Also you can run basic PowerShell scripts and manage MSI packages. Use these profiles to perform post-install tasks
 - **Create configuration profiles with automated tasks that can be applied to your Linux endpoints**. You can select packages to install or uninstall using Flatpak, manage local users and local groups and execute basic shell scripts. Use these profiles to perform post-install tasks
 - **Create configuration profiles with automated tasks that can be applied to your MacOS endpoints**. You can select packages to install or uninstall using Brew, manage local users and local groups and execute basic shell scripts. Use these profiles to perform post-install tasks
