@@ -19,7 +19,7 @@ keywords:
 OpenUEM will have the following improvements soon (in no particular order):  
 
 - Manage APT/DNF repositories and install packages using apt/dnf/yum 
-- **Add roles** that can manage selections of your assets 
+- Add roles that can manage selections of your assets 
 - Provide network printers information (toner status, pages printed...) 
 - Back up files using [**Kopia**](https://kopia.io/) 
 - Back up the Postgres database 
