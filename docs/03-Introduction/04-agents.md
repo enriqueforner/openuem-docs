@@ -25,7 +25,7 @@ Agents are responsible for gathering and reporting information about the endpoin
 
 Agents **send its reports to Agents workers** using NATS messages. Agents workers will store the information in the PostgreSQL database
 
-When an agent is installed on an endpoint, it will remain in a "Waiting for admission" state until an administrator validates that this agent can be managed from OpenUEM. When the agent is admitted, a digital certificate is provided to the agent so it can secure its services.
+When an agent is installed on an endpoint, it will remain in a **Waiting for admission** state until an administrator validates that this agent can be managed from OpenUEM. When the agent is admitted, a digital certificate is provided to the agent so it can secure its services.
 
 An agent can be disabled if we don't want to receive new reports.
 
