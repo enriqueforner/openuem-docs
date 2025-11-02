@@ -28,7 +28,7 @@ OpenUEM has a global configuration that has the following sections:
 - Organizations: you can create new organizations
 - Sessions: you can view and manage the OpenUEM users’ sessions
 - SMTP: the SMTP server settings
-- General Settings: here you can manage some settings that will be global and inherited for every organization on OpenUEM
+- General Settings: you can manage some settings that will be global and inherited for every organization on OpenUEM
 - Update servers: you can update servers’ components if a new release is available
 - Certificates: you can manage OpenUEM certificates
 
