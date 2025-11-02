@@ -28,7 +28,7 @@ The table shows you all the computers with information about its name, the OS ve
 ![Computers list](/img/console/computers_list.png)
 
 :::tip
-You can create tags by visiting the Admin -> Tags section
+You can create tags by visiting the **Admin** -> **Tags** section
 
 ![Tag management](/img/console/tags.png)
 :::
@@ -91,7 +91,7 @@ Also, you can know the **BitLocker status** hovering the mouse over the icon.
 BitLocker status is retrieved using WMI and sometimes the query is flaky and can crash showing you an unknown status icon. If you need to know that information quick, you can visit the agents’ view and select the [**Force restart**](/docs/Console/agents#2-more-actions) action menu.
 :::
 
-Now, if you click on the icon in the File Browser icon, you’ll open a new window that allows you to browse the logical disk using an SFTP connection.
+Now, if you click on the icon in the **File Browser** icon, you’ll open a new window that allows you to browse the logical disk using an SFTP connection.
 
 :::note
 The connection between the console is secured thanks to two digital certificates. An SFTP certificate which its associated key it's stored in the console that is used to authenticate the connection, and a server certificate that it's stored in the agent an it's generated when the agent is admitted. See [Agents' life cycle](/docs/Console/agents#1-agents-life-cycle) to know more.
@@ -186,7 +186,7 @@ In Linux machines, packages installed with Flatpak may not appear in Gnome's app
 :::
 
 :::warning
-Winget should be ready for your host if it has been used for some time, but if you have a fresh installation of Windows 10, winget.exe may not be ready to use on that endpoint although it should be installed automatically in the following days. To get the WinGet executable quicker (winget.exe), you should first update Microsoft Store after opening it and then you may have to update the app called "App Installer". Visit [this link](https://www.microsoft.com/p/app-installer/9nblggh4nns1#activetab=pivot:overviewtab) to locate that app and update it
+Winget should be ready for your host if it has been used for some time, but if you have a fresh installation of Windows 10, winget.exe may not be ready to use on that endpoint although it should be installed automatically in the following days. To get the WinGet executable quicker (winget.exe), you should first update Microsoft Store after opening it and then you may have to update the app called **App Installer**. Visit [this link](https://www.microsoft.com/p/app-installer/9nblggh4nns1#activetab=pivot:overviewtab) to locate that app and update it
 :::
 
 :::danger
@@ -240,7 +240,7 @@ OpenUEM will show which checks have passed, and a link to open the remote connec
 
 ![VNC checks](/img/console/vnc_checks.png)
 
-In the new tab, a Connect button will be displayed. 
+In the new tab, a **Connect** button will be displayed. 
 
 ![VNC connect](/img/console/vnc_first_step.png)
 
@@ -253,7 +253,7 @@ When the button is clicked, a request will be sent to the agent to perform the f
 The random PIN will be displayed to the user.
 
 :::tip
-By default, OpenUEM shows the PIN to the user to offer privacy to the user, as we can’t know the pin unless the user tells us. If you prefer to skip this step you can go to Admin -> General Settings -> Request VNC PIN to user and disable this behavior. In any case, the PIN which is the VNC password will be changed every time a connection is made. See the [Security section](/docs/Introduction/security) for more information.
+By default, OpenUEM shows the PIN to the user to offer privacy to the user, as we can’t know the pin unless the user tells us. If you prefer to skip this step you can go to **Admin** -> **General Settings** -> **Request VNC PIN to user** and disable this behavior. In any case, the PIN which is the VNC password will be changed every time a connection is made. See the [Security section](/docs/Introduction/security) for more information.
 
 ![VNC Settings](/img/console/vnc_settings.png)
 :::
@@ -262,7 +262,7 @@ In a Windows endpoint, the PIN will be displayed in the user’s default browser
 
 ![VNC PIN shown to the user in Windows](/img/console/vnc_pin_shown.png)
 
-In a Linux endpoint a notification message will be shown with a 30 seconds timeout.
+In a Linux endpoint a notification message will be shown with a **30 seconds timeout**.
 
 ![VNC PIN shown to the user in Linux](/img/console/linux_vnc_pin_shown.png)
 
@@ -307,7 +307,7 @@ OpenUEM will show which checks have passed, and a link to open the remote connec
 
 ![RDP checks](/img/console/rdp_checks.png)
 
-In the new tab, a Connect button will be displayed. 
+In the new tab, a **Connect** button will be displayed. 
 
 ![RDP connect](/img/console/rdp_first_step.png)
 
@@ -325,7 +325,7 @@ By default, OpenUEM shows the PIN to the user to offer privacy to the user, as w
 ![VNC Settings](/img/console/vnc_settings.png)
 :::
 
-A notification message will be shown to the user with a 30 seconds timeout.
+A notification message will be shown to the user with a **30 seconds timeout**.
 
 ![VNC PIN shown to the user in Linux](/img/console/linux_vnc_pin_shown.png)
 
@@ -378,7 +378,7 @@ If you want to use RustDesk’s integration with OpenUEM, you must visit the Rem
 
 ![RustDesk checks](/img/console/rustdesk_checks.png)
 
-In the new window, you’ll find a button to Initiate a RustDesk session. That button, when clicked, will connect to the remote endpoint and make the configuration changes to reflect the OpenUEM settings.   
+In the new window, you’ll find a button to **Initiate a RustDesk session**. That button, when clicked, will connect to the remote endpoint and make the configuration changes to reflect the OpenUEM settings.   
 
 ![RustDesk initiate session](/img/console/rustdesk_init.png)
 
@@ -444,7 +444,7 @@ When you visit the note again, you’ll see the preview so if you want to change
 You can save custom information associated with an endpoint using metadata.
 
 :::note
-You must create metadata first in Admin -> Metadata adding a name for metadata and an optional description.
+You must create metadata first in **Admin** -> **Metadata** adding a name for metadata and an optional description.
 
 ![Admin -> Metadata](/img/console/admin_metadata.png)
 :::
