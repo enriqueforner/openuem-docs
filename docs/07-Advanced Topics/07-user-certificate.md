@@ -74,8 +74,8 @@ In Windows, a warning will be shown when the Certificate Authority is imported. 
 The file should be in the following locations:
 
 - Docker: `certificates/users/admin.pfx` in the docker compose folder
-- Linux: `/etc/openuem-server/certificates/users/admin.pfx``
-- Windows: C:\Program Files\OpenUEM Server\certificates\users\admin.pfx`
+- Linux: `/etc/openuem-server/certificates/users/admin.pfx`
+- Windows: `C:\Program Files\OpenUEM Server\certificates\users\admin.pfx`
 
 :::warning
 The certificate is protected with the password **changeit** by default unless you've set a different password when you installed OpenUEM.
