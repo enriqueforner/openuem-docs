@@ -18,7 +18,7 @@ keywords:
 
 # Profiles
 
-OpenUEM profiles allows you to group several configuration tasks that will be applied to your endoints by defining a desired state.
+OpenUEM profiles allows you to group several configuration tasks that will be applied to your endpoints by defining a desired state.
 
 Right now, you can install or uninstall packages with WinGet/Flatpak/Brew, manage registry keys, local users and local groups. Also you can run basic PowerShell scripts in Windows endpoints and basic shell scripts in Linux and MacOS endpoints.
 
