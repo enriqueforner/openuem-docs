@@ -36,7 +36,7 @@ If there’s a new release, a message like this will be displayed.
 
 ![New agent release available](/img/console/new_release_available.png)
 
-To update your agents, you must select the agents that you want to update using the check boxes or the Select All button, and then select a release from the “Select a release” dropdown menu.
+To update your agents, you must select the agents that you want to update using the check boxes or the **Select All** button, and then select a release from the **Select a release** dropdown menu.
 
 ![Preparing to update agent](/img/console/preparing_to_update_agent.png)
 
