@@ -34,6 +34,6 @@ The serial number of the certificate, the certificate type, a description, the e
 Thanks to the database, the [OCSP Responder](/docs/03-Introduction/07-ocsp.md) service could tell the different OpenUEM components if a certificate used to authenticate it’s still valid.
 :::
 
-If you are in need of revoking a certificate, that is specify that a certificate is no longer valid, you can click on the three dots button to use the Revoke action.
+If you are in need of revoking a certificate, that is specify that a certificate is no longer valid, you can click on the three dots button to use the **Revoke** action.
 
 ![Revoke certificate](/img/console/revoke_certificate.png)
