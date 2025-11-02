@@ -20,7 +20,7 @@ keywords:
 
 OpenUEM comes with a web user interface named **OpenUEM Console**.
 
-The console can work behind a [reverse proxy](/docs/Advanced%20Topics/reverse-proxy) or be served right away from the Console component on port 1323 by default.
+The console can work behind a [reverse proxy](/docs/Advanced%20Topics/reverse-proxy) or be served right away from the Console component on **port 1323 by default**.
 
 The log in page looks like this:
 
@@ -55,23 +55,23 @@ OpenUEM supports these providers:
 - [Keycloak](https://www.keycloak.org/) 
 - [Zitadel](https://zitadel.com/) 
 
-If you want to use one of these providers with OpenUEM, you must first log in to OpenUEM with the admin user certificate and configure your provider. Once you have checked that OpenID works fine, you can choose to disable the use of digital certificates. 
+If you want to use one of these providers with OpenUEM, you must first log into OpenUEM with the admin user certificate and configure your provider. Once you have checked that OpenID works fine, you can choose to disable the use of digital certificates. 
 
 :::note
-To avoid an administrator lockout, if your OpenID service is not recoverable, you can reenable the use of digital certificates to log in the console by adding the following entry to the Console section of the openuem.ini configuration file and restart the console service: 
+To avoid an administrator lockout, if your OpenID service is not recoverable, you can reenable the use of digital certificates to log into the console by adding the following entry to the **Console** section of the openuem.ini configuration file and restart the console service: 
 
 ```
 reenablecertauth = true
 ```
 :::
 
-Before we explain how you can configure your provider and OpenUEM let’s talk about the common configuration in OpenUEM. You can configure how users log in OpenUEM visiting the Authentication tab in the Global Configuration (click on the cog icon in the navigation bar). 
+Before we explain how you can configure your provider and OpenUEM let’s talk about the common configuration in OpenUEM. You can configure how users log into OpenUEM visiting the Authentication tab in the Global Configuration (click on the cog icon in the navigation bar). 
 
-The Authentication tab allows you to: 
+The **Authentication** tab allows you to: 
 
 - Enable or disable the use of digital certificates to log into the system.
-- Show or hide the Register button in the login page. The Register button allows users to create a new account and ask for a digital certificate to log in.
-- You can show or hide the Login with OpenID Connect button.
+- Show or hide the **Register** button in the login page. The Register button allows users to create a new account and ask for a digital certificate to log in.
+- You can show or hide the **Login with OpenID Connect** button.
 - If you want to use OpenID Connect you must select one of the supported providers.
 - You can force OpenUEM to create automatically an account that is linked to the user that logs in with your Identity Provider, or you must create an account in OpenUEM that shares the username used with your Identity Provider before the user logs in.
 - You can force OpenUEM to approve automatically the account that is created when a user logs in with your Identity Provider, or you can choose to block the access to OpenUEM until you approve that account.
@@ -79,11 +79,11 @@ The Authentication tab allows you to:
 
 ![OpenUEM Authentication](/img/authentik/openuem_authentik_settings.png)
 
-If you want to create a user account, before the user logs in, you can do it from the Users tab in the Global Configuration. You must specify the username that exists in your Identity Provider, fill in the account data, and select the authentication type. 
+If you want to create a user account, before the user logs in, you can do it from the **Users** tab in the **Global Configuration**. You must specify the username that exists in your Identity Provider, fill in the account data, and select the authentication type. 
 
 ![Create OpenID connect account](/img/authentik/create_openid_account.png)
 
-If you enable the manual approval of accounts, you must visit the Users tab and click on the three dots button to approve an account, so the user is allowed access after the user logs in your Identity Provider
+If you enable the manual approval of accounts, you must visit the **Users** tab and click on the three dots button to approve an account, so the user is allowed access after the user logs into your Identity Provider
 
 ![Approve OpenID connect account](/img/authentik/approve_account_openid.png)
 
@@ -139,7 +139,7 @@ Also, in your user database (users.yml) you should add a group to your users. Op
       - openuem
 ```
 
-It’s time to go to OpenUEM and configure the Authelia provider. Let’s visit the Global configuration and click the Authentication tab. Here we can manage how OpenUEM authenticates users. You must add the Client ID, the URL that OpenUEM will be used to communicate with Authelia (which is the url used by your service in my example http://127.0.0.1:9091) and the name of the group that the user must be a member of.  
+It’s time to go to OpenUEM and configure the Authelia provider. Let’s visit the **Global configuration** and click the **Authentication** tab. Here we can manage how OpenUEM authenticates users. You must add the **Client ID**, the **URL** that OpenUEM will be used to communicate with Authelia (which is the url used by your service in my example http://127.0.0.1:9091) and the **name of the group** that the user must be a member of.  
 
 ![Authelia's settings](/img/authelia/authelia_1.png)
 
@@ -183,15 +183,15 @@ Once the application is created, we can inspect its configuration.
 
 ![App information](/img/authentik/authentik_new_app_6.png)
 
-If we click on the Provider for OpenUEM link, a new window will show with some information that we’d need to let OpenUEM know how the OpenID Connect authentication must be performed. We’ll need the Client ID and the OpenID Configuration Issuer url (the slash at the end must be copied to; Authentik’s URLs always end with a slash). 
+If we click on the **Provider for OpenUEM** link, a new window will show with some information that we’d need to let OpenUEM know how the OpenID Connect authentication must be performed. We’ll need the Client ID and the OpenID Configuration Issuer url (the slash at the end must be copied to; Authentik’s URLs always end with a slash). 
 
 ![App OpenID configuration](/img/authentik/authentik_new_app_7.png)
 
-It’s time to go to OpenUEM and configure the Authentik provider. Let’s visit the Global configuration and click the Authentication tab. Here we can manage how OpenUEM authenticates users. You must add the Client ID, the URL that OpenUEM will be used to communicate with Authentik and the name of the group that the user must be a member of.  
+It’s time to go to OpenUEM and configure the Authentik provider. Let’s visit the **Global configuration** and click the **Authentication** tab. Here we can manage how OpenUEM authenticates users. You must add the **Client ID**, the **URL** that OpenUEM will be used to communicate with Authentik and the **name of the group** that the user must be a member of.  
 
 ![Authentik's settings](/img/authentik/openuem_authentik_settings.png)
 
-Once you save the required settings for Authentik, when you click the Login with OpenID Connect button, you should be redirected to Authentik’s login page.  
+Once you save the required settings for Authentik, when you click the **Login with OpenID Connect** button, you should be redirected to Authentik’s login page.  
 
 ![Authentik's redirection](/img/authentik/authentik_redirect.png)
 
@@ -233,15 +233,15 @@ In the new window click on **Group Membership**
 
 ![Group membership](/img/keycloak/keycloak_6.png)
 
-In the mapper definition, we give it a name like Group Membership and use **groups** as the Token Claim Name. We only must enable the “Add to user info” and “Add to token introspection” and leave the rest options as disabled. Click the Save button to finish our mapper definition. 
+In the mapper definition, we give it a name like Group Membership and use **groups** as the Token Claim Name. We only must enable the **Add to user info** and **Add to token introspection** and leave the rest options as disabled. Click the **Save** button to finish our mapper definition. 
 
 ![Group membership definition](/img/keycloak/keycloak_7.png)
 
-It’s time to go to OpenUEM and configure the Keycloak provider. Let’s visit the Global configuration and click the Authentication tab. Here we can manage how OpenUEM authenticates users. You must add the Client ID (openuem in my example), the URL that OpenUEM will be used to communicate with Keycloak (which is the URL for your Keycloak server followed by /realms/ and the name of your realm, in my example http://localhost:8080/realms/OpenUEM) and the name of the group that the user must be a member of (in my case openuem).  
+It’s time to go to OpenUEM and configure the Keycloak provider. Let’s visit the Global configuration and click the **Authentication** tab. Here we can manage how OpenUEM authenticates users. You must add the **Client ID** (openuem in my example), the **URL** that OpenUEM will be used to communicate with Keycloak (which is the URL for your Keycloak server followed by /realms/ and the name of your realm, in my example http://localhost:8080/realms/OpenUEM) and the **name of the group** that the user must be a member of (in my case openuem).  
 
 ![Keycloak's settings](/img/keycloak/keycloak_8.png)
 
-Once you save the required settings for Keycloak, when you click the Login with OpenID Connect button, you should be redirected to Keycloak’s login page.  
+Once you save the required settings for Keycloak, when you click the **Login with OpenID Connect** button, you should be redirected to Keycloak’s login page.  
 
 ![Keycloak's redirection](/img/keycloak/keycloak_9.png)
 
@@ -297,11 +297,11 @@ We create an authorization for our project and for the role that we’ve just cr
 
 ![New Authorization 2](/img/zitadel/zitadel_11.png)
 
-It’s time to go to OpenUEM and configure the Zitadel provider. Let’s visit the Global configuration and click the Authentication tab. Here we can manage how OpenUEM authenticates users. You must add the Client ID (that we copied earlier), the URL that OpenUEM will be used to communicate with Zitadel (which is the URL for our instance) and the name of the role that the user must be a member of (in my case openuem).  
+It’s time to go to OpenUEM and configure the Zitadel provider. Let’s visit the Global configuration and click the **Authentication** tab. Here we can manage how OpenUEM authenticates users. You must add the **Client ID** (that we copied earlier), the **URL** that OpenUEM will be used to communicate with Zitadel (which is the URL for our instance) and the **name of the role** that the user must be a member of (in my case openuem).  
 
 ![Zitadel's settings](/img/zitadel/zitadel_12.png)
 
-Once you save the required settings for Zitadel, when you click the Login with OpenID Connect button, you should be redirected to Zitadel's login page.  
+Once you save the required settings for Zitadel, when you click the **Login with OpenID Connect** button, you should be redirected to Zitadel's login page.  
 
 ![Zitadel's redirection](/img/zitadel/zitadel_13.png)
 
